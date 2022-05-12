@@ -1,0 +1,14 @@
+body
+{
+    background-color: teal-800;
+}
+.rodapé
+{
+    border-color: brown;
+    display: grid;
+    box-sizing: calc(20%);
+}
+.tipo_serviço
+{
+    align-items:center;
+}

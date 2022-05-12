@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+	
+	{% block conteudo %}
+		<!-- <h1 style="text-align: center";>Barbearia - AllStyle </h1> -->
+		<form action="/cadastrar" class="container" method="POST">
+			<div class="col-xs-12">
+				<a href="/" class="btn btn-outline-warning">Voltar </a>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-6">
+					<input type="text" name="nome" id="nome" placeholder="Nome do Serviço" class="form-control">
+				</div>
+                <!-- TIPO DO SERVIÇO
+                <select class="form-select" name="tipo" id="tipo" aria-label="Default select example">
+                    <option selected>Tipo do serviço</option>
+                    <option value="1">Promocional</option>
+                    <option value="2">Normal</option>
+                    <option value="3">Combo</option>
+                  </select> -->
+
+				<div class="col-md-6">
+					<input type="text" name="tipo" id="tipo" placeholder="Tipo do Serviço" class="form-control">
+				</div>
+                <br><br>
+				<p><div class="col-md-6">
+					<input type="text" name="preço" id="preço" placeholder="Preço do Serviço" class="form-control">
+				</div></p>
+			</div>
+			<br>
+			<div class="row col-xs-12">
+				<button type="submit" class="btn btn-block btn-success">Cadastrar Serviço</button>
+			</div>
+		</form>
+		
+	{% endblock %}

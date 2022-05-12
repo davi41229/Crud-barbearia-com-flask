@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+	
+	{% block conteudo %}
+		<h1 style="text-align: center";>Atualizar Serviço {{ serviços.nome}}</h1>
+		<!-- PASSAR empresa como parametro -->
+		<form action="/atualizar/{{ serviços.id}}" class="container" method="POST">
+			<div class="col-xs-12">
+				<a href="/" class="btn btn-outline-warning">Voltar </a>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-6">
+					<input type="text" name="nome" id="nome" placeholder="Nome do Serviço" class="form-control" value="{{ serviços.nome}}">
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="tipo" id="tipo" placeholder="Tipo do Serviço" class="form-control" value="{{ serviços.tipo}}">
+				</div>
+				<div class="col-md-6">
+					<input type="text" name="preço" id="preço" placeholder="Preço do Serviço" class="form-control" value="{{ serviços.preço}}">
+				</div>
+			</div>
+			<br>
+			<div class="row col-xs-12">
+				<button type="submit" class="btn btn-block btn-secondary">Finalizar Edição de Serviço</button>
+			</div>
+		</form>
+		
+	{% endblock %}
